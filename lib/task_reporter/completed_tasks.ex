@@ -1,7 +1,7 @@
 defmodule TaskReporter.CompletedTasks do
   import Ecto.Query
   alias TaskReporter.Repo
-  alias TaskReporter.Tasks.Task
+  alias TaskReporter.Db.Task
 
   def list_completed_tasks do
     from(t in Task, select: t.data)
